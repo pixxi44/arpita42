@@ -1,0 +1,296 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/pixxi44/arpita42/blob/main/lab03_2502110007%20.%20ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "IT-12"
+      ],
+      "metadata": {
+        "id": "kU24lxxFINFG"
+      },
+      "id": "kU24lxxFINFG"
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"Hello, Shop Floor!\")\n",
+        "\n",
+        "name = input(\"Operator name: \")\n",
+        "\n",
+        "print(\"Hello,\", name, \"! Welcome to the shop floor.\")"
+      ],
+      "metadata": {
+        "id": "ju1LqBoaFeLT",
+        "outputId": "179fb432-6bdc-44e6-f13a-8b8480f2cf00",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "id": "ju1LqBoaFeLT",
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello, Shop Floor!\n",
+            "Operator name: ARPITA\n",
+            "Hello, ARPITA ! Welcome to the shop floor.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "IT-10"
+      ],
+      "metadata": {
+        "id": "OjN7x8GkIMI1"
+      },
+      "id": "OjN7x8GkIMI1"
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "accept = 0\n",
+        "rework = 0\n",
+        "scrap = 0\n",
+        "\n",
+        "for i in range(10):\n",
+        "    diameter = float(input(\"Enter diameter: \"))\n",
+        "\n",
+        "    if 10 <= diameter <= 20:\n",
+        "        print(\"ACCEPT\")\n",
+        "        accept += 1\n",
+        "\n",
+        "    elif 8 <= diameter < 10 or 20 < diameter <= 22:\n",
+        "        print(\"REWORK\")\n",
+        "        rework += 1\n",
+        "\n",
+        "    else:\n",
+        "        print(\"SCRAP\")\n",
+        "        scrap += 1\n",
+        "\n",
+        "print(\"\\n----- FINAL REPORT -----\")\n",
+        "print(\"Accepted:\", accept)\n",
+        "print(\"Rework:\", rework)\n",
+        "print(\"Scrap:\", scrap)"
+      ],
+      "metadata": {
+        "id": "_Ap3FkicFw-m",
+        "outputId": "6a3dad6c-3d09-424e-d4c3-581107484965",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "id": "_Ap3FkicFw-m",
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter diameter: 4\n",
+            "SCRAP\n",
+            "Enter diameter: 4\n",
+            "SCRAP\n",
+            "Enter diameter: 56\n",
+            "SCRAP\n",
+            "Enter diameter: 5\n",
+            "SCRAP\n",
+            "Enter diameter: 5\n",
+            "SCRAP\n",
+            "Enter diameter: 3\n",
+            "SCRAP\n",
+            "Enter diameter: 3\n",
+            "SCRAP\n",
+            "Enter diameter: 2\n",
+            "SCRAP\n",
+            "Enter diameter: 6\n",
+            "SCRAP\n",
+            "Enter diameter: 4\n",
+            "SCRAP\n",
+            "\n",
+            "----- FINAL REPORT -----\n",
+            "Accepted: 0\n",
+            "Rework: 0\n",
+            "Scrap: 10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "IT-8"
+      ],
+      "metadata": {
+        "id": "8xpMmt8qIT7k"
+      },
+      "id": "8xpMmt8qIT7k"
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "total = int(input(\"Enter total parts: \"))\n",
+        "size = int(input(\"Enter box size: \"))\n",
+        "\n",
+        "boxes = total // size\n",
+        "loose = total % size\n",
+        "\n",
+        "print(\"Full boxes:\", boxes)\n",
+        "print(\"Loose parts:\", loose)\n",
+        "\n",
+        "print(\"Audit:\", boxes * size + loose == total)"
+      ],
+      "metadata": {
+        "id": "DMSvCyXJGjPL",
+        "outputId": "d0ee00c5-8073-43e1-d676-bccc3d69380c",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "id": "DMSvCyXJGjPL",
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter total parts: 64\n",
+            "Enter box size: 3\n",
+            "Full boxes: 21\n",
+            "Loose parts: 1\n",
+            "Audit: True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "IT-6"
+      ],
+      "metadata": {
+        "id": "lAs_kCBNIWoV"
+      },
+      "id": "lAs_kCBNIWoV"
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "accept = 0\n",
+        "rework = 0\n",
+        "scrap = 0\n",
+        "\n",
+        "print(\"===== BATCH INSPECTION =====\")\n",
+        "\n",
+        "for i in range(10):\n",
+        "    diameter = float(input(\"Enter diameter: \"))\n",
+        "\n",
+        "    if 10 <= diameter <= 20:\n",
+        "        print(\"ACCEPT\")\n",
+        "        accept += 1\n",
+        "\n",
+        "    elif 8 <= diameter < 10 or 20 < diameter <= 22:\n",
+        "        print(\"REWORK\")\n",
+        "        rework += 1\n",
+        "\n",
+        "    else:\n",
+        "        print(\"SCRAP\")\n",
+        "        scrap += 1\n",
+        "\n",
+        "# Pack accepted parts only\n",
+        "box_size = 4\n",
+        "\n",
+        "boxes = accept // box_size\n",
+        "loose = accept % box_size\n",
+        "\n",
+        "# Closing report\n",
+        "print(\"\\n===== END OF SHIFT REPORT =====\")\n",
+        "\n",
+        "print(\"Accepted parts:\", accept)\n",
+        "print(\"Rework parts:\", rework)\n",
+        "print(\"Scrap parts:\", scrap)\n",
+        "\n",
+        "print(\"Full boxes:\", boxes)\n",
+        "print(\"Loose accepted parts:\", loose)\n",
+        "\n",
+        "print(\"Audit:\", boxes * box_size + loose == accept)\n",
+        "\n",
+        "print(\"===== SHIFT COMPLETE =====\")"
+      ],
+      "metadata": {
+        "id": "51OkNJmFGl-T",
+        "outputId": "26b50d5a-d84b-436d-8e51-18dfc7120e2a",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "id": "51OkNJmFGl-T",
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "===== BATCH INSPECTION =====\n",
+            "Enter diameter: 8\n",
+            "REWORK\n",
+            "Enter diameter: 7\n",
+            "SCRAP\n",
+            "Enter diameter: 6\n",
+            "SCRAP\n",
+            "Enter diameter: 9\n",
+            "REWORK\n",
+            "Enter diameter: 09\n",
+            "REWORK\n",
+            "Enter diameter: 8\n",
+            "REWORK\n",
+            "Enter diameter: 7\n",
+            "SCRAP\n",
+            "Enter diameter: 6\n",
+            "SCRAP\n",
+            "Enter diameter: 5\n",
+            "SCRAP\n",
+            "Enter diameter: 5\n",
+            "SCRAP\n",
+            "\n",
+            "===== END OF SHIFT REPORT =====\n",
+            "Accepted parts: 0\n",
+            "Rework parts: 4\n",
+            "Scrap parts: 6\n",
+            "Full boxes: 0\n",
+            "Loose accepted parts: 0\n",
+            "Audit: True\n",
+            "===== SHIFT COMPLETE =====\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "toc_visible": true,
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
